@@ -36,7 +36,7 @@ bot.on('message', (message) =>
 
 		if (CommandIs('shutdown', message))
 		{	
-			if (hasRole(message.member, Owner) == true)
+			if (hasRole(message.member, 'Owner') == true)
 			{
 				message.channel.sendMessage('Disconnecting...');
 				onlinelol = false;
@@ -50,7 +50,7 @@ bot.on('message', (message) =>
 	
 	if (CommandIs('activate',message) && onlinelol == false)
 	{
-		if (hasRole(message.member, Owner) == true)
+		if (hasRole(message.member, 'Owner') == true)
 		{
 			message.channel.sendMessage('bot is now online.');
 			onlinelol = true;
@@ -63,7 +63,7 @@ bot.on('message', (message) =>
 	
 	if (CommandIs('say',message) && onlinelol == false)
 	{
-		if (hasRole(message.member, Owner) == true)
+		if (hasRole(message.member, 'Owner') == true)
 		{
 			message.channel.sendMessage('bot is now online.');
 			onlinelol = true;
